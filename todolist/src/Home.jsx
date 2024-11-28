@@ -8,7 +8,7 @@ import { PiTrashSimple } from "react-icons/pi";
 import { CgNotes } from "react-icons/cg";
 
 // Base API URL (set dynamically via environment variables)
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://notes-maker-yhb3.onrender.com";
 
 function Home() {
   const [todos, setTodos] = useState([]);
