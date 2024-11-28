@@ -1,11 +1,12 @@
 import React,{useState} from "react"
 import axios from 'axios'
 
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://notes-maker-yhb3.onrender.com";
 
 function Create(){
     const [task, setTask]=useState("")
     const handleAdd=() =>{
-        axios.post('http://localhost:3001/add',{task:task})
+        axios.post('API_BASE_URL',{task:task})
         .then(result => location.reload())  // Add the new task to the state in Home
         .catch(err => console.log('error found',err))
 
