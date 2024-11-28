@@ -7,7 +7,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("process.env.MONGO_URI")
+mongoose.connect(process.env.MONGO_URI||"mongodb+srv://alwinpaldano:Alwin*RP123@cluster0.z8urw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",{
+  useNewUrlParser: true,
+    useUnifiedTopology: true,
+   
+});
 
 app.get('/get',(req ,res) =>
   TodoModel.find()
