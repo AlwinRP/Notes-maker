@@ -6,7 +6,7 @@ const API_BASE_URL = process.env.REACT_APP_API_URL || "https://notes-maker-yhb3.
 function Create(){
     const [task, setTask]=useState("")
     const handleAdd=() =>{
-        axios.post('API_BASE_URL',{task:task})
+        axios.post(API_BASE_URL,{task:task})
         .then(result => location.reload())  // Add the new task to the state in Home
         .catch(err => console.log('error found',err))
 
